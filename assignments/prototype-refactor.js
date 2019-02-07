@@ -142,39 +142,39 @@ class GameObject {
     });
   
     // ------------------------------Added as part of the Stretch-------------------
-    const villain = new Beast({ // A new child of Humanoid
-      createdAt: new Date(),
-      dimensions: {
-        length: 1,
-        width: 2,
-        height: 4,
-      },
-      healthPoints: 20,
-      name: 'Tanith',
-      team: 'Tanesians',
-      weapons: [
-        'Bomb',
-        'Athame',
-      ],
-      language: 'Kur',
-    });
+    // const villain = new Beast({ // A new child of Humanoid
+    //   createdAt: new Date(),
+    //   dimensions: {
+    //     length: 1,
+    //     width: 2,
+    //     height: 4,
+    //   },
+    //   healthPoints: 20,
+    //   name: 'Tanith',
+    //   team: 'Tanesians',
+    //   weapons: [
+    //     'Bomb',
+    //     'Athame',
+    //   ],
+    //   language: 'Kur',
+    // });
   
-    const hero = new God({ // A new child of Beast
-      createdAt: new Date(),
-      dimensions: {
-        length: 1,
-        width: 2,
-        height: 4,
-      },
-      healthPoints: 20,
-      name: 'Gomoth',
-      team: 'Bothkale',
-      weapons: [
-        'Powerburst',
-        "Shoth'\ku",
-      ],
-      language: 'Zarmonn',
-    });
+    // const hero = new God({ // A new child of Beast
+    //   createdAt: new Date(),
+    //   dimensions: {
+    //     length: 1,
+    //     width: 2,
+    //     height: 4,
+    //   },
+    //   healthPoints: 20,
+    //   name: 'Gomoth',
+    //   team: 'Bothkale',
+    //   weapons: [
+    //     'Powerburst',
+    //     "Shoth'\ku",
+    //   ],
+    //   language: 'Zarmonn',
+    // });
   
     
     console.log(mage.createdAt); // Today's date
@@ -187,8 +187,8 @@ class GameObject {
     console.log(archer.greet()); // Lilith offers a greeting in Elvish.
     console.log(mage.takeDamage()); // Bruce took damage.
     console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
-    console.log(villain.greet1());
-    console.log(hero.greet2());
+    //console.log(villain.greet1());
+    //console.log(hero.greet2());
   
     // Stretch task: 
     // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
