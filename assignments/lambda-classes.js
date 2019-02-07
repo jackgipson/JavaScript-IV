@@ -64,15 +64,26 @@ const dan = new Instructor({
   });
 
 const jess = new Student({
+    age: 25,
+    name: "Jess",
+    location: "Nebraska",
+    gender: "M",
     previousBackground: "Construction",
     className: "CS132",
     favSubjects: ['Html', 'CSS', 'JavaScript']
 });
 
 const shawn = new ProjectManager({
-    gradClassName: "CS1",
-    favInstructor: "Dan"
-})
+    age: 21,
+    name: "Shawn",
+    location: "California",
+    gender: "M",
+    specialty: "Node",
+    favLanguage: ["C++", "Python", "Omicron Per Sei 8"],
+    catchphrase: "Let's Meet",
+    gradClassName: "CS2",
+    favInstructor: "Cam"
+});
 
 
 console.log(dan.age);
