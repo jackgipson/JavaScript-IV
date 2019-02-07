@@ -28,16 +28,15 @@ class GameObject {
     * should inherit destroy() from GameObject's prototype
   */
   
-  function CharacterStats(health) {
-    GameObject.call(this, health);
-    this.healthPoints = health.healthPoints;
-  }
-  
-  CharacterStats.prototype = Object.create(GameObject.prototype);
-  
-    CharacterStats.prototype.takeDamage = function() {
-      return `${this.health} took damage.`
+ class CharacterStats extends GameObject {
+    constructor(health) {
+        this.healthPoints = health.healthPoints;
     }
+  
+    takeDamage() {
+      return `${this.health} took damage.`;
+  }
+}
   
   /*
     === Humanoid (Having an appearance or character resembling that of a human.) ===
@@ -49,33 +48,36 @@ class GameObject {
     * should inherit takeDamage() from CharacterStats
   */
    
-  function Humanoid(alien) {
-    CharacterStats.call(this, alien);
+ class Humanoid extends CharacterStats {
+    constructor(alien) {
     this.team = alien.team;
     this.weapons = alien.weapons;
     this.language = alien.language;
+    }
+  
+    greet() {
+        return `${this.name} offers a greeting in ${this.language}.`
   }
-  Humanoid.prototype = Object.create(CharacterStats.prototype);
-  Humanoid.prototype.greet = function() {
-      return `${this.name} offers a greeting in ${this.language}.`
-    }
+}
+
+
   
   
-    function Beast(evil) {
-      Humanoid.call(this, evil);
-    }
-    Beast.prototype = Object.create(Humanoid.prototype);
-    Beast.prototype.greet1 = function () {
-      return `I am the all powerful ${this.name} and I will destroy you with my ${this.weapons}.`
-    }
+    // function Beast(evil) {
+    //   Humanoid.call(this, evil);
+    // }
+    // Beast.prototype = Object.create(Humanoid.prototype);
+    // Beast.prototype.greet1 = function () {
+    //   return `I am the all powerful ${this.name} and I will destroy you with my ${this.weapons}.`
+    // }
   
-    function God(good) {
-      Beast.call(this, good);
-    }
-    God.prototype = Object.create(Humanoid.prototype);
-    God.prototype.greet2 = function () {
-      return `I am the all powerful ${this.name} and I will destroy you with my ${this.weapons} and my ${this.team}.`
-    }
+    // function God(good) {
+    //   Beast.call(this, good);
+    // }
+    // God.prototype = Object.create(Humanoid.prototype);
+    // God.prototype.greet2 = function () {
+    //   return `I am the all powerful ${this.name} and I will destroy you with my ${this.weapons} and my ${this.team}.`
+    // }
   
   
   /*
