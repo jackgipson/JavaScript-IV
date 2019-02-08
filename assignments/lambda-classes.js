@@ -7,9 +7,9 @@ class Person {
         this.location = attributes.location;
         this.gender = attributes.gender;
     }
-    
+
     speak() {
-        return `Hello my name is ${ this.name}, I am from ${this.location}`;
+        return `Hello my name is ${this.name}, I am from ${this.location}`;
     }
 }
 
@@ -22,33 +22,50 @@ class Instructor extends Person {
     }
     demo(subject) { //demo receives a subject string as an argument and logs out the phrase 'Today we are learning about {subject}' where subject is the param passed in.
         return `Today we are learning about ${subject}`;
-      }
+    }
 
     grade(student, subject) { //grade receives a student object and a subject string as arguments and logs out '{student.name} receives a perfect score on {subject}'
         return `${student.name} receives a perfect score on ${subject}`;
-      }
     }
+}
 
 class Student extends Person {
     constructor(studentAtts) {
         super(studentAtts);
-        this. previousBackground = studentAtts.previousBackground;
+        this.previousBackground = studentAtts.previousBackground;
         this.className = studentAtts.className;
         this.favSubjects = studentAtts.favSubjects;
-        
     }
-    listSubjects() {
-        const listsSubjects = ['Math', 'Science', "Redux"];
 
-    listsSubjects.forEach( favoriteSubjects => console.log(favoriteSubjects));
+
+    listsSubjects() {
+        return `${this.favSubjects[0]}, ${this.favSubjects[1]}, ${this.favSubjects[2]}`;
     }
+
+    PRAssignment(subject) {
+        return `${this.name} submitted a PR for ${subject}`;
+    }
+
+    sprintChallenge(subject) {
+        return `${this.name} begins working hard on ${subject}`;
+    }
+
 }
+
 
 class ProjectManager extends Instructor {
     constructor(ProjectManagerAtts) {
         super(ProjectManagerAtts);
         this.gradClassName = ProjectManagerAtts.gradClassName;
         this.favInstructor = ProjectManagerAtts.favInstructor;
+    }
+
+    standUp(channel) {
+        return `${this.name} announces to ${channel}, @channel standy times!`;
+    }
+
+    debugsCode(student, subject) {
+        return `${this.name} debugs ${student.name}'s code on ${subject}`;
     }
 }
 
@@ -61,7 +78,7 @@ const dan = new Instructor({
     specialty: "React",
     favLanguage: ["Javascript", "Python", "Elm"],
     catchphrase: "Don't forget the homies"
-  });
+});
 
 const jess = new Student({
     age: 25,
@@ -86,16 +103,21 @@ const shawn = new ProjectManager({
 });
 
 
-console.log(dan.speak());
-console.log(dan.demo('Math'));
-console.log(dan.grade(dan, 'JavaScript'));
+// console.log(dan.speak());
+// console.log(dan.demo('Math'));
+// console.log(dan.grade(dan, 'JavaScript'));
 
-console.log(dan.favLanguage);
-console.log(jess.previousBackground);
-console.log(jess.className);
-console.log(shawn.favInstructor);
-console.log(shawn.gradClassName);
+// console.log(dan.favLanguage);
+// console.log(jess.previousBackground);
+// console.log(jess.className);
+// console.log(shawn.favInstructor);
+// console.log(shawn.gradClassName);
 
+// console.log(jess.PRAssignment('Math'));
+// console.log(jess.sprintChallenge('Science'));
 
+// console.log(shawn.standUp('Async'));
+// console.log(shawn.debugsCode(jess, 'CS123'));
 
-
+// console.log(jess.listsSubjects());
+// console.log(jess.sprintChallenge('Psych'));
