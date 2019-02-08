@@ -102,15 +102,15 @@ const shawn = new ProjectManager({
 });
 
 
-// console.log(dan.speak());
-// console.log(dan.demo('Math'));
-// console.log(dan.grade(dan, 'JavaScript'));
+console.log(dan.speak());
+console.log(dan.demo('Math'));
+console.log(dan.grade(dan, 'JavaScript'));
 
-// console.log(dan.favLanguage);
-// console.log(jess.previousBackground);
-// console.log(jess.className);
-// console.log(shawn.favInstructor);
-// console.log(shawn.gradClassName);
+console.log(dan.favLanguage);
+console.log(jess.previousBackground);
+console.log(jess.className);
+console.log(shawn.favInstructor);
+console.log(shawn.gradClassName);
 
 // console.log(jess.PRAssignment('Math'));
 // console.log(jess.sprintChallenge('Science'));
