@@ -112,11 +112,11 @@ console.log(jess.className);
 console.log(shawn.favInstructor);
 console.log(shawn.gradClassName);
 
-// console.log(jess.PRAssignment('Math'));
-// console.log(jess.sprintChallenge('Science'));
+console.log(jess.PRAssignment('Math'));
+console.log(jess.sprintChallenge('Science'));
 
-// console.log(shawn.standUp('Async'));
-// console.log(shawn.debugsCode(jess, 'CS123'));
+console.log(shawn.standUp('Async'));
+console.log(shawn.debugsCode(jess, 'CS123'));
 
-// console.log(jess.listsSubjects());
-// console.log(jess.sprintChallenge('Psych'));
+console.log(jess.listsSubjects());
+console.log(jess.sprintChallenge('Psych'));
