@@ -69,7 +69,6 @@ class ProjectManager extends Instructor {
     }
 }
 
-
 const dan = new Instructor({
     age: 29,
     name: "Dan",
